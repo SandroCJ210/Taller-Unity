@@ -63,15 +63,15 @@ public class PlayerJump : MonoBehaviour
     private void CheckGround()
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, raycastDistance, groundLayer);
-
-        if (hit.transform != null)
-        {
-            isGrounded = true;
-        }
-        else
-        {
-            isGrounded = false;
-        }
+        isGrounded = (hit.collider != null);
+        // if (hit.transform != null)
+        // {
+        //     isGrounded = true;
+        // }
+        // else
+        // {
+        //     isGrounded = false;
+        // }
 
     }
 
