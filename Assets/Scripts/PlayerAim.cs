@@ -1,3 +1,5 @@
+using System.Linq.Expressions;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerAim : MonoBehaviour
@@ -7,11 +9,26 @@ public class PlayerAim : MonoBehaviour
     
     // Expression-bodied members
     public Vector2 AimDirection => aimDirection;
+
+
+     Animator torsoAnimator;
+  
+     void Start()
+    {
+        torsoAnimator = transform.Find("Animacion.torso").GetComponent<Animator>();
+    }
     void Update()
     {
         GetAimInput();
+        GetImputY();
+
+
     }
     // Solid principles
+    private void GetImputY() {
+        float directionshot = Input.GetAxisRaw("Vertical");
+        torsoAnimator.SetFloat("aimY", directionshot);
+    } 
     private void GetAimInput()
     {
         float aimX = Input.GetAxisRaw("Horizontal");
@@ -36,10 +53,13 @@ public class PlayerAim : MonoBehaviour
         } 
         else
         {
-            aimDirection = lastHorizontalDirection;
+            aimDirection = Vector2.right; // Siempre vuelve a la derecha si no hay input
+            lastHorizontalDirection = Vector2.right;
         }
+
+
     }
-    
+
     public Vector2 GetAimDirection(){
         return aimDirection;
     }

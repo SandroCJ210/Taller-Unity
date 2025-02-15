@@ -14,11 +14,29 @@ public class PlayerJump : MonoBehaviour
     private bool tryJumping = false;
     private bool isGrounded = false;
 
+    Animator torsoAnimator;
+    Animator piernasAnimator;
+
+    private Player player;
+
+  
+
+
+
     private Rigidbody2D rb;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        player = GetComponent<Player>();
+
+       
+
+        torsoAnimator = transform.Find("Animacion.torso").GetComponent<Animator>();
+        piernasAnimator = transform.Find("Animacion.piernas").GetComponent<Animator>();
+
+
     }
 
     private void Update()
@@ -26,8 +44,9 @@ public class PlayerJump : MonoBehaviour
         GetInput();
         CheckGround();
         Jump();
+        AnimationPlayer();
 
-        Debug.Log("isGrounded: " + isGrounded + " tryJumping: " + tryJumping);
+        //Debug.Log("isGrounded: " + isGrounded + " tryJumping: " + tryJumping);
     }
 
     private void FixedUpdate()
@@ -64,14 +83,24 @@ public class PlayerJump : MonoBehaviour
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, raycastDistance, groundLayer);
         isGrounded = (hit.collider != null);
-        // if (hit.transform != null)
-        // {
-        //     isGrounded = true;
-        // }
-        // else
-        // {
-        //     isGrounded = false;
-        // }
+       
+    }
+
+    
+    
+   private void AnimationPlayer()
+    {
+        float movementX = player.InputVector.x;
+        float movementY = rb.velocity.y;
+       // torsoAnimator.SetFloat("movy", movementY);
+        torsoAnimator.SetFloat("movementx", movementX);
+        piernasAnimator.SetFloat("movementx", movementX);
+
+        torsoAnimator.SetBool("ground", isGrounded);
+        piernasAnimator.SetBool("ground", isGrounded);
+            
+
+        
 
     }
 

@@ -38,4 +38,6 @@ public class Player : MonoBehaviour
     {
         rb.velocity = new Vector2(inputVector.x * speed, rb.velocity.y);
     }
+
+    public Vector2 InputVector => inputVector;
 }

@@ -1,0 +1,313 @@
+fileFormatVersion: 2
+guid: 2f29aea575c61794aa838b97719ed391
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 20
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Disparo-abajo_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 111
+        width: 24
+        height: 34
+      alignment: 9
+      pivot: {x: 0.61762863, y: 0.603788}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0c63df0440d8f74a96a8dbf0f4552de
+      internalID: -1287850742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disparo-abajo_1
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 109
+        width: 23
+        height: 32
+      alignment: 9
+      pivot: {x: 0.6431999, y: 0.6470351}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38362852a9af8f64ea2c2e6df06f9bfd
+      internalID: -999438140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disparo-abajo_2
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 108
+        width: 20
+        height: 33
+      alignment: 9
+      pivot: {x: 0.6529171, y: 0.6639668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60ed039e00e3042439eb439b0b7da674
+      internalID: 666008593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disparo-abajo_3
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 9
+        width: 20
+        height: 52
+      alignment: 9
+      pivot: {x: 0.68820536, y: 0.7669256}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11909388600aa474c8371d76a0af2d51
+      internalID: -1568673539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disparo-abajo_4
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 9
+        width: 20
+        height: 53
+      alignment: 9
+      pivot: {x: 0.6646795, y: 0.7263791}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d895095073a9db40b577f6b39c66481
+      internalID: 862742697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disparo-abajo_5
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 7
+        width: 20
+        height: 54
+      alignment: 9
+      pivot: {x: 0.6646797, y: 0.76139635}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7920e50178f2dd74eba648380bccd8db
+      internalID: -1306200406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disparo-abajo_6
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 32
+        width: 23
+        height: 29
+      alignment: 9
+      pivot: {x: 0.63297105, y: 0.54056144}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 377c156cedfd601409dbf90c3a88506e
+      internalID: 1201734274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disparo-abajo_7
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 30
+        width: 20
+        height: 31
+      alignment: 9
+      pivot: {x: 0.71173173, y: 0.58347785}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caef43f008e40064988265a27a7e60bf
+      internalID: -386622746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Disparo-abajo_8
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 28
+        width: 20
+        height: 33
+      alignment: 9
+      pivot: {x: 0.6882057, y: 0.59267634}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dc9f261d8fe14c42ae46788d670a00f
+      internalID: -1806351321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 4810f87b467839547ba9b26d3283596c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Disparo-abajo_0: -1287850742
+      Disparo-abajo_1: -999438140
+      Disparo-abajo_2: 666008593
+      Disparo-abajo_3: -1568673539
+      Disparo-abajo_4: 862742697
+      Disparo-abajo_5: -1306200406
+      Disparo-abajo_6: 1201734274
+      Disparo-abajo_7: -386622746
+      Disparo-abajo_8: -1806351321
+      Disparo-abajo_9: -20209082
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

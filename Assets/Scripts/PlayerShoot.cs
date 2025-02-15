@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlayerShoot : MonoBehaviour
 {
@@ -15,18 +16,27 @@ public class PlayerShoot : MonoBehaviour
     private float nextFireTime = 0f; // Tiempo en el que se permitirá el próximo disparo
 
     private Coroutine shootingCoroutine;
+
+    private Animator torsoAnimator;
+   
     private void Start()
     {
+        
+        torsoAnimator = transform.Find("Animacion.torso").GetComponent<Animator>();
+
         playerAim = GetComponent<PlayerAim>();
     }
-
+   
     private void Update()
     {
         Vector2 aimDirection = playerAim.AimDirection;
         bulletSpawn.position = transform.position + new Vector3(aimDirection.x * offsetMagnitude, aimDirection.y * offsetMagnitude, 0);
         if (Input.GetButtonDown("Fire2"))
         {
+           
             Shoot();
+            StartCoroutine(ShootAnimation());
+
         }
 
         if (Input.GetKey(KeyCode.L) && Time.time >= nextFireTime)
@@ -73,5 +83,11 @@ public class PlayerShoot : MonoBehaviour
         // bullet.AddComponent<CircleCollider2D>();
         // SpriteRenderer sr = bullet.AddComponent<SpriteRenderer>();
         // sr.sprite = Resources.Load<Sprite>("Sprites/PlayerBullet");
+    }
+    private IEnumerator ShootAnimation()
+    {
+        torsoAnimator.SetBool("shoot", true);
+        yield return new WaitForSeconds(0.15f); 
+        torsoAnimator.SetBool("shoot", false);
     }
 }
