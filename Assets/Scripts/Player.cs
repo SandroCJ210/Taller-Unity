@@ -13,6 +13,15 @@ public class Player : MonoBehaviour
 
     private Rigidbody2D rb;
 
+    public float Life
+    {
+        get => life;
+        private set
+        {
+            life = value;
+            UIManager.Instance.UpdateUIText();
+        }
+    }
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -47,9 +56,10 @@ public class Player : MonoBehaviour
     {
         if(!collision.gameObject.CompareTag("Bullet")) return;
         Destroy(collision.gameObject);
-        life -= 5.0f;
+        Life -= 5.0f;
         Debug.Log("Bullet triggered, new life is " + life);
-        if(life <= 0){
+        if(Life <= 0){
+            UIManager.Instance.DisplayLoseScreen();
             Destroy(gameObject);
         }
     }

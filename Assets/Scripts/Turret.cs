@@ -31,6 +31,12 @@ public class Turret : MonoBehaviour
 
     void Start()
     {
+        InitializeVariables();
+        GameManager.Instance.EnemiesAlive++;
+    }
+
+    private void InitializeVariables()
+    {
         Warning = transform.GetChild(2).gameObject;
         player = GameObject.Find("Player")?.transform;
         Warning.SetActive(false);
@@ -100,6 +106,7 @@ public class Turret : MonoBehaviour
             if (life <= 0)
             {
                 Destroy(gameObject);
+                GameManager.Instance.EnemiesAlive--;
             }
         }
         if (collision.gameObject.CompareTag("Player"))
