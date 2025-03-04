@@ -10,21 +10,20 @@ public class PlayerAim : MonoBehaviour
     // Expression-bodied members
     public Vector2 AimDirection => aimDirection;
 
-
-     Animator torsoAnimator;
+     private Animator torsoAnimator;
+     private Animator piernasAnimator;
   
      void Start()
     {
         torsoAnimator = transform.Find("Animacion.torso").GetComponent<Animator>();
+        piernasAnimator = transform.Find("Animacion.piernas").GetComponent<Animator>();
     }
     void Update()
     {
         GetAimInput();
         GetImputY();
-
-
     }
-    // Solid principles
+    
     private void GetImputY() {
         float directionshot = Input.GetAxisRaw("Vertical");
         torsoAnimator.SetFloat("aimY", directionshot);
@@ -53,10 +52,49 @@ public class PlayerAim : MonoBehaviour
         } 
         else
         {
-            aimDirection = Vector2.right; // Siempre vuelve a la derecha si no hay input
-            lastHorizontalDirection = Vector2.right;
+            // aimDirection = Vector2.right; // Siempre vuelve a la derecha si no hay input
+            // lastHorizontalDirection = Vector2.right;
+            aimDirection = lastHorizontalDirection;
         }
-
+        
+        Debug.Log(lastHorizontalDirection.x);
+        if (aimX != 0)
+        {
+            torsoAnimator.SetFloat("movementx", lastHorizontalDirection.x);
+            piernasAnimator.SetFloat("movementx", lastHorizontalDirection.x);
+        }
+        else
+        {
+            
+            
+            torsoAnimator.SetFloat("movementx", 0);
+            piernasAnimator.SetFloat("movementx", 0);
+            
+            
+            // if (lastHorizontalDirection.x < 0)
+            // {
+            //     torsoRenderer.flipX = true;
+            // }
+            // else
+            // {
+            //     torsoAnimator.SetBool("isRight", true);
+            // }
+            
+            
+            
+            
+        }
+        if (lastHorizontalDirection.x < 0)
+        {
+            torsoAnimator.SetFloat("isRight", -1);
+            piernasAnimator.SetFloat("isRight", -1);
+        }
+        else
+        {
+            torsoAnimator.SetFloat("isRight", 1);
+            piernasAnimator.SetFloat("isRight", 1);
+        }
+        
 
     }
 

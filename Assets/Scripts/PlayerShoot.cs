@@ -18,29 +18,34 @@ public class PlayerShoot : MonoBehaviour
     private Coroutine shootingCoroutine;
 
     private Animator torsoAnimator;
-   
+    public AudioManager audioManager;
+    
     private void Start()
     {
         
         torsoAnimator = transform.Find("Animacion.torso").GetComponent<Animator>();
-
+        GameObject audioManagerObject = GameObject.FindGameObjectWithTag("AudioManager");
+        audioManager = audioManagerObject.GetComponent<AudioManager>();
         playerAim = GetComponent<PlayerAim>();
+        
     }
    
     private void Update()
     {
         Vector2 aimDirection = playerAim.AimDirection;
         bulletSpawn.position = transform.position + new Vector3(aimDirection.x * offsetMagnitude, aimDirection.y * offsetMagnitude, 0);
-        if (Input.GetButtonDown("Fire2"))
+        if (Input.GetButtonDown("Fire2") || Input.GetKeyDown(KeyCode.H))
         {
-           
+            
             Shoot();
+            audioManager.PlaySfx(audioManager.BulletSound);
             StartCoroutine(ShootAnimation());
 
         }
 
-        if (Input.GetKey(KeyCode.L) && Time.time >= nextFireTime)
+        if (Input.GetKey(KeyCode.M) && Time.time >= nextFireTime)
         {
+            
             Shoot();
             nextFireTime = Time.time + fireRate;
         }

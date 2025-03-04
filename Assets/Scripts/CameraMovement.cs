@@ -26,7 +26,7 @@ public class CameraMovement : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(transform.position, new Vector3(_movementThresholdX * 2, _movementThresholdY * 2, 1));
+        Gizmos.DrawWireCube(transform.position - new Vector3(4,0,0), new Vector3(_movementThresholdX * 2, _movementThresholdY * 2, 1));
     }
     
     void LateUpdate()
@@ -39,7 +39,7 @@ public class CameraMovement : MonoBehaviour
         Vector3 targetPosition = _target.transform.position;
         Vector3 cameraPosition = transform.position;
         
-        Vector3 difference = targetPosition - cameraPosition;
+        Vector3 difference = targetPosition - (cameraPosition + new Vector3(4,0,0));
 
         if (Math.Abs(difference.x) < _movementThresholdX && Math.Abs(difference.y) < _movementThresholdY)
         {

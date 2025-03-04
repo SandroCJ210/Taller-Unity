@@ -92,9 +92,9 @@ public class PlayerJump : MonoBehaviour
     {
         float movementX = player.InputVector.x;
         float movementY = rb.velocity.y;
-       // torsoAnimator.SetFloat("movy", movementY);
-        torsoAnimator.SetFloat("movementx", movementX);
-        piernasAnimator.SetFloat("movementx", movementX);
+        // torsoAnimator.SetFloat("movy", movementY);
+        // torsoAnimator.SetFloat("movementx", movementX);
+        // piernasAnimator.SetFloat("movementx", movementX);
 
         torsoAnimator.SetBool("ground", isGrounded);
         piernasAnimator.SetBool("ground", isGrounded);
